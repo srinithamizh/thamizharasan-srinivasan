@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Thamizharasan Srinivasan';
-  designation = 'Software Developer';
+  designation = 'Software Development Engineer';
 }

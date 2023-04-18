@@ -42,7 +42,6 @@ jobs:
       - name: Commit changes and push to srinithamizh.github.io
         run: |
           cd srinithamizh.github.io
-          ls
           git config user.name "Thamizharasan Srinivasan"
           git config user.email "srinithamizh@gmail.com"
           git add .
