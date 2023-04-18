@@ -1,0 +1,14 @@
+.navbar-color {
+    background-color: #0087BB;
+}
+
+.navbar-brand-image {
+    height: auto;
+    width: auto;
+    max-height: 60px;
+    max-width: 60px;
+}
+
+.navbar-items-spacing {
+    flex-grow: 0;
+}
