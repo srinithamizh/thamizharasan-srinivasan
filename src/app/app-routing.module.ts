@@ -8,10 +8,6 @@ import { WorkComponent } from './work/work.component';
 
 const routes: Routes = [
   {
-    path:'**', 
-    component: HomeComponent
-  },
-  {
     path:'home', 
     component: HomeComponent
   },
@@ -30,6 +26,11 @@ const routes: Routes = [
   {
     path:'contact',
     component: ContactComponent
+  },
+  {
+    path:'**',
+    component:HomeComponent,
+    redirectTo: ''
   }
 ];
 
