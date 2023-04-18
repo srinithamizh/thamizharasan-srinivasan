@@ -1,0 +1,50 @@
+name: Deploy My Portfolio
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
+      - name: Installing dependencies
+        run: npm install
+
+      - name: Build My Portfolio
+        run: ng build
+
+      - name: Clone srinithamizh.github.io
+        uses: actions/checkout@v2
+        with:
+          repository: srinithamizh/srinithamizh.github.io
+          token: ${{ secrets.ACCESS_TOKEN }}
+          path: srinithamizh.github.io
+          clean: false
+
+      - name: Copy dist files
+        run: |
+          rm -rf srinithamizh.github.io/*
+          cp -r dist/* srinithamizh.github.io/
+
+      - name: Commit changes and push to srinithamizh.github.io
+        run: |
+          cd srinithamizh.github.io
+          ls
+          git config user.name "Thamizharasan Srinivasan"
+          git config user.email "srinithamizh@gmail.com"
+          git add .
+          git commit -m "Deployed on - $(date '+%Y-%m-%d %H:%M:%S')"
+          git push origin main
