@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   sections:string[] = ['Home', 'About', 'Work', 'Skills', 'Contact'];
-  currentSection: string = '';
+  currentSection: string = 'Home';
 
   constructor() {
    }
@@ -16,11 +16,16 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  setActive(section: string) {
+  setActive(section: string): void {
     this.currentSection = section;
   }
 
-  onSectionChange(section: any) {
+  onSectionChange(section: any): void {
     this.currentSection = section.replace(/^./, section[0].toUpperCase());
+  }
+
+  scrollTop(): void {
+    window.scrollTo(0, 0);
+    this.currentSection = 'Home';
   }
 }
