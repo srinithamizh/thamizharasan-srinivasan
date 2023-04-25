@@ -1,0 +1,20 @@
+.centered-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-text {
+    text-align: center;
+}
+  
+.name {
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 0px;
+}
+
+.designation {
+    font-size: 18px;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +12,7 @@ export class NavbarComponent implements OnInit {
   sections:string[] = ['Home', 'About', 'Work', 'Skills', 'Contact'];
   currentSection: string = 'Home';
 
-  constructor() {
+  constructor(private Router:Router) {
    }
 
   ngOnInit(): void {
@@ -21,7 +23,8 @@ export class NavbarComponent implements OnInit {
   }
 
   onSectionChange(section: any): void {
-    this.currentSection = section.replace(/^./, section[0].toUpperCase());
+    this.Router.navigateByUrl('#'+section);
+    this.currentSection = _.capitalize(section);
   }
 
   scrollTop(): void {
