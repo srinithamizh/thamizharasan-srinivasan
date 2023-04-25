@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
+import { ScrollSpyDirective } from './scroll-spy.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     WorkComponent,
     SkillsComponent,
-    ContactComponent
+    ContactComponent,
+    ScrollSpyDirective
   ],
   imports: [
     BrowserModule,

@@ -12,3 +12,8 @@
 .navbar-items-spacing {
     flex-grow: 0;
 }
+
+.active {
+    color:white;
+    font-weight: bold;
+}

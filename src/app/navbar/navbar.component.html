@@ -7,18 +7,32 @@
         class="navbar-toggler" 
         type="button" 
         data-bs-toggle="collapse" 
-        data-bs-target="#navbarSupportedContent" 
-        aria-controls="navbarSupportedContent" 
+        data-bs-target="#portfolioNavbar" 
+        aria-controls="portfolioNavbar" 
         aria-expanded="false" 
         aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse navbar-items-spacing" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse navbar-items-spacing" id="portfolioNavbar">
         <ul class="navbar-nav ms-auto px-2" *ngFor="let section of sections">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="" fragment="{{section | lowercase}}">{{section | uppercase}}</a>
+          <li class="nav-item" id="{{ section }}">
+            <a 
+              class="nav-link"
+              [class.active] = "currentSection === section"
+              aria-current="page"
+              routerLink=""
+              fragment="{{section | lowercase}}"
+              (click)="setActive(section)"
+            >{{section | uppercase}}</a>
           </li>
         </ul>
       </div>
     </div>
 </nav>
+<div appScrollSpy (sectionChange)="onSectionChange($event)">
+  <app-home id="home"></app-home>
+  <app-about id="about"></app-about>
+  <app-work id="work"></app-work>
+  <app-skills id="skills"></app-skills>
+  <app-contact id="contact"></app-contact>
+</div>

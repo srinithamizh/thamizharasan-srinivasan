@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  sections:string[] = ["Home", "About", "Work", "Skills", "Contact"];
+  sections:string[] = ['Home', 'About', 'Work', 'Skills', 'Contact'];
+  currentSection: string = '';
 
   constructor() {
    }
@@ -15,4 +16,11 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  setActive(section: string) {
+    this.currentSection = section;
+  }
+
+  onSectionChange(section: any) {
+    this.currentSection = section.replace(/^./, section[0].toUpperCase());
+  }
 }
