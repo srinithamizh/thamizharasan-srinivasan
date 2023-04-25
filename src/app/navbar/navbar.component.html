@@ -1,7 +1,7 @@
-<nav class="navbar navbar-dark navbar-color navbar-expand-lg">
+<nav class="navbar navbar-dark navbar-color navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand " routerLink="">
-        <img class="navbar-brand-image" src="assets/logo.png" alt="Thamizh">
+      <a class="navbar-brand" routerLink="">
+        <img class="navbar-brand-image" src="assets/logo.png" alt="Thamizh" title = "Thamizharasan Srinivasan">
       </a>
       <button 
         class="navbar-toggler" 
@@ -16,7 +16,7 @@
       <div class="collapse navbar-collapse navbar-items-spacing" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto px-2" *ngFor="let section of sections">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/{{section | lowercase}}">{{section | uppercase}}</a>
+            <a class="nav-link active" aria-current="page" routerLink="" fragment="{{section | lowercase}}">{{section | uppercase}}</a>
           </li>
         </ul>
       </div>
