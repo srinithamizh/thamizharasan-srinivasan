@@ -1,0 +1,20 @@
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-color {
+    background-color: #0087BB;
+}
+
+.social-media-icons {
+    padding-right: 10px !important;
+}
+  

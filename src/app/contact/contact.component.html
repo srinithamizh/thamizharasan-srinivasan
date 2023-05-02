@@ -1,3 +1,37 @@
 <div class="page">
-    <p>Contact</p>
+    <div class="contact-us">
+        <div class="row">
+            <div class="col-md-6">
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                    <div class="form-floating mb-1">
+                        <input type="text" class="form-control input-sm" id="name" placeholder="name" formControlName="name">
+                        <label for="name">Name</label>
+                      </div>
+                    <div class="form-floating mb-1">
+                        <input type="email" class="form-control input-sm" id="email" placeholder="name@example.com" formControlName="email">
+                        <label for="email">Email address</label>
+                      </div>
+                      <div class="form-floating mb-1">
+                        <input type="text" class="form-control input-sm" id="subject" placeholder="Subject" formControlName="subject">
+                        <label for="subject">Subject</label>
+                      </div>
+                      <div class="form-floating mb-1">
+                        <textarea class="form-control input-sm" id="body" placeholder="body" formControlName="body"></textarea> 
+                        <label for="body">Body</label>
+                      </div>
+                    <button type="submit">Submit</button>
+                  </form>
+            </div>
+        </div>
+        <footer class="footer-color text-light py-3 footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-md-center">
+                        <p>&copy; {{ year }} All rights reserved</p>
+                        <p>Designed by Thamizharasan Srinivasan</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </div>
