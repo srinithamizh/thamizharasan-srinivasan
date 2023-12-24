@@ -1,0 +1,25 @@
+.logo {
+    height: 6em;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em var(--primary-color));
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1.1;
+}
+
+.title {
+    margin-bottom: 0px;
+}
+
+.name {
+    color: var(--primary-color);
+}
+
+.role {
+    font-size: 2em;
+    font-weight: normal;
+}
