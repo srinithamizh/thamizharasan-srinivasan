@@ -29,7 +29,7 @@ const Footer = () => {
     const year: number = new Date().getFullYear();
 
     return (
-        <div className="footer">
+        <div id="footer" className="footer">
             <h2>Contact</h2>
             <div className="social-media-link flex row">
                 {socialMediaLink.map((socialMedia) =>

@@ -1,10 +1,10 @@
-import AboutCss from './About.module.css'
+import './About.css'
 const About = () => {
     return (
         <>
-            <section id="about" className={AboutCss.about}>
+            <section id="about" className="about">
                 <h2>About Me</h2>
-                <div className={AboutCss.card}>
+                <div className="">
 
                 </div>
             </section>
