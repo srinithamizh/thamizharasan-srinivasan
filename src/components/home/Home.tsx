@@ -1,14 +1,26 @@
 import logo from '../../assets/logo.png'
-import Utils from '../../utils/Utils';
 import './Home.css'
 
 export default function Home() {
     const name: string = 'Thamizharasan Srinivasan';
     const role: string = 'Software Developer';
-    const experience: number = Utils.calculateExperience();
+    const experience: number = calculateExperience();
     const description: string = `I'm a ${role} with over ${experience} years of professional experience in Java, Spring Boot and Angular. 
-    Active Team player and proven ability to approach problems effectively, prioritize and complete multiple tasks.
-    `;
+    Active Team player and proven ability to approach problems effectively, prioritize and complete multiple tasks.`;
+
+    function calculateExperience(): number {
+        const currentDate = new Date();
+    const DOJ = new Date(2020, 8);
+    let differeceInYears: number = currentDate.getFullYear() - DOJ.getFullYear();
+    if (
+        currentDate.getMonth() < DOJ.getMonth() ||
+        (currentDate.getMonth() === DOJ.getMonth() &&
+            currentDate.getDate() < DOJ.getDate())
+    ) {
+        differeceInYears--;
+    }
+    return differeceInYears;
+    }
 
     return (
         <>
