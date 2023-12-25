@@ -1,8 +1,9 @@
 .logo {
-    height: 6em;
+    height: 8em;
 }
 
 .logo:hover {
+    transition-duration: 0.5s;
     filter: drop-shadow(0 0 2em var(--primary-color));
 }
 
@@ -20,6 +21,35 @@ h1 {
 }
 
 .role {
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: normal;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.button {
+    background-color: transparent;
+    border: var(--primary-color) solid 1px;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.scrollButton:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
