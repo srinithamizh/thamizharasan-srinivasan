@@ -24,11 +24,27 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-  #home, #about, #footer{
-      width: 320px;
+
+  #home,
+  #about,
+  #footer {
+    width: 320px;
   }
 
   .icon {
-      margin: 10px !important;
+    margin: 10px !important;
+  }
+
+  .scroll-up {
+    height: 1.25em;
+    position: fixed;
+    bottom: 207px;
+    right: 25px;
+}
+
+  .scroll-top-button {
+    bottom: 200px;
+    height: 30px;
+    width: 30px;
   }
 }

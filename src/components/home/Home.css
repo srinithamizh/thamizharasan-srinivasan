@@ -54,3 +54,25 @@ h1 {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+
+.scroll-up {
+    height: 1.75em;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.scroll-top-button {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1em;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
