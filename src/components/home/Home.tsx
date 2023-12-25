@@ -1,14 +1,13 @@
 import logo from '../../assets/logo.png'
-import Utils from '../../utils/utils';
+import Utils from '../../utils/Utils';
 import './Home.css'
 
 export default function Home() {
     const name: string = 'Thamizharasan Srinivasan';
     const role: string = 'Software Developer';
     const experience: number = Utils.calculateExperience();
-    const description: string = `I'm a ${role} with ${experience}+ years of professional experience in Java, Spring Boot and
-    Angular. Active Team player and proven ability to approach problems effectively, prioritize and complete
-    multiple task. Interested in learning new technologies.
+    const description: string = `I'm a ${role} with over ${experience} years of professional experience in Java, Spring Boot and Angular. 
+    Active Team player and proven ability to approach problems effectively, prioritize and complete multiple task.
     `;
 
     return (

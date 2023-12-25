@@ -1,4 +1,3 @@
-
 function calculateExperience(): number {
     const currentDate = new Date();
     const DOJ = new Date(2020, 8);
