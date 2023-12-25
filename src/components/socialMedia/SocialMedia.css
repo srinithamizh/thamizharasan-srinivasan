@@ -1,0 +1,21 @@
+.icon {
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    margin: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.social-media-icon {
+    height: 1.5em;
+    padding: 12px;
+    filter: invert(61%) sepia(27%) saturate(2258%) hue-rotate(129deg) brightness(102%) contrast(98%);
+}
+
+.icon:hover {
+    background-color: var(--primary-color);
+}
+
+.social-media-icon:hover {
+    filter: invert(7%) sepia(49%) saturate(0%) hue-rotate(242deg) brightness(93%) contrast(83%);
+}

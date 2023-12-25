@@ -1,0 +1,14 @@
+.flex {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.copyrights {
+    color: var(--primary-color);
+}

@@ -10,16 +10,23 @@ export default function Home() {
 
     function calculateExperience(): number {
         const currentDate = new Date();
-    const DOJ = new Date(2020, 8);
-    let differeceInYears: number = currentDate.getFullYear() - DOJ.getFullYear();
-    if (
-        currentDate.getMonth() < DOJ.getMonth() ||
-        (currentDate.getMonth() === DOJ.getMonth() &&
-            currentDate.getDate() < DOJ.getDate())
-    ) {
-        differeceInYears--;
+        const DOJ = new Date(2020, 8);
+        let differeceInYears: number = currentDate.getFullYear() - DOJ.getFullYear();
+        if (
+            currentDate.getMonth() < DOJ.getMonth() ||
+            (currentDate.getMonth() === DOJ.getMonth() &&
+                currentDate.getDate() < DOJ.getDate())
+        ) {
+            differeceInYears--;
+        }
+        return differeceInYears;
     }
-    return differeceInYears;
+
+    const scrollToElement = (id:string):void => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 
     return (
@@ -28,7 +35,7 @@ export default function Home() {
                 <img src={logo} className="logo" alt={name} />
                 <h1 className="title">Hello, I'm <span className="name">{name}</span></h1>
                 <h4 className="role">{description}</h4>
-                <button className="button scrollButton">Scroll for more</button>
+                <button className="button scrollButton" onClick={()=>scrollToElement('about')}>Scroll for more</button>
             </section>
         </>
     );
