@@ -4,11 +4,12 @@
     margin: 50px;
     width: 50px;
     height: 50px;
+    z-index: 99;
 }
 
 .social-media-icon {
     height: 1.5em;
-    padding: 12px;
+    margin: 10px;
     filter: invert(61%) sepia(27%) saturate(2258%) hue-rotate(129deg) brightness(102%) contrast(98%);
 }
 

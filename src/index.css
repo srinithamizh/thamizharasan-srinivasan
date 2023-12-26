@@ -47,4 +47,16 @@ body {
     height: 30px;
     width: 30px;
   }
+
+  .flex-row {
+    flex-direction: column;
+  }
+
+  .about-info {
+    width: 100%;
+  }
+
+  .separator {
+    transform: rotate(90deg);
+  }
 }
